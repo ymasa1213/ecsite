@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  scope module: :public do
+    root to: "homes#top"
+  end
   # コントローラーの記述を変更すると処理を行うように記述
 
   devise_for :customers, controllers: {
